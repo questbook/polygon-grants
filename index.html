@@ -16,138 +16,14 @@
       <meta name="twitter:title" content="Polygon Grants Program | Questbook">
       <meta name="twitter:description" content="Apply for Polygon Grants to build the future of Web3. Access funding, mentorship and resources to accelerate your blockchain project.">
       <meta name="twitter:image" content="https://ipfs.io/ipfs/QmRuZmr3c76nExVWzwpbdDkNe8ymkwJuRDzWyLYQRZodgz">
-      <link rel="icon" href="https://assets.website-files.com/62270ece7871d925a678b02a/62271250b2a03e970f0a6e70_logo.svg" type="image/svg+xml">
+      <link rel="icon" href="./assets/icon.svg" sizes="any" type="image/svg+xml">
       <!-- Performance optimization: Preload critical resources -->
       <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
       <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
       <!-- Core CSS -->
       <script src="https://cdn.tailwindcss.com"></script>
       <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-             colors: {
-                primary: {
-                  50: '#f8f8f8',
-                  100: '#e8e8e8',
-                  200: '#d3d3d3',
-                  300: '#a3a3a3',
-                  400: '#737373',
-                  500: '#525252',
-                  600: '#404040',
-                  700: '#262626',
-                  800: '#171717',
-                  900: '#0a0a0a',
-                  950: '#030303',
-                },
-                secondary: {
-                  50: '#f8f8f8',
-                  100: '#e8e8e8',
-                  200: '#d3d3d3',
-                  300: '#a3a3a3',
-                  400: '#737373',
-                  500: '#525252',
-                  600: '#404040',
-                  700: '#262626',
-                  800: '#171717',
-                  900: '#0a0a0a',
-                  950: '#030303',
-                },
-                accent: {
-                  50: '#f8f8f8',
-                  100: '#e8e8e8',
-                  200: '#d3d3d3',
-                  300: '#a3a3a3',
-                  400: '#737373',
-                  500: '#525252',
-                  600: '#404040',
-                  700: '#262626',
-                  800: '#171717',
-                  900: '#0a0a0a',
-                  950: '#030303',
-                },
-              },
-              fontFamily: {
-                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
-              },
-              spacing: {
-                '18': '4.5rem',
-                '22': '5.5rem',
-                '30': '7.5rem',
-              },
-              maxWidth: {
-                '8xl': '88rem',
-                '9xl': '96rem',
-              },
-              animation: {
-                'fade-in': 'fadeIn 0.5s ease-in',
-                'fade-out': 'fadeOut 0.5s ease-out',
-                'slide-up': 'slideUp 0.5s ease-out',
-                'slide-down': 'slideDown 0.5s ease-out',
-                'slide-left': 'slideLeft 0.5s ease-out',
-                'slide-right': 'slideRight 0.5s ease-out',
-                'scale-in': 'scaleIn 0.5s ease-out',
-                'scale-out': 'scaleOut 0.5s ease-out',
-                'spin-slow': 'spin 3s linear infinite',
-                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                'bounce-slow': 'bounce 3s infinite',
-                'float': 'float 3s ease-in-out infinite',
-              },
-              keyframes: {
-                fadeIn: {
-                  '0%': { opacity: '0' },
-                  '100%': { opacity: '1' },
-                },
-                fadeOut: {
-                  '0%': { opacity: '1' },
-                  '100%': { opacity: '0' },
-                },
-                slideUp: {
-                  '0%': { transform: 'translateY(20px)', opacity: '0' },
-                  '100%': { transform: 'translateY(0)', opacity: '1' },
-                },
-                slideDown: {
-                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
-                  '100%': { transform: 'translateY(0)', opacity: '1' },
-                },
-                slideLeft: {
-                  '0%': { transform: 'translateX(20px)', opacity: '0' },
-                  '100%': { transform: 'translateX(0)', opacity: '1' },
-                },
-                slideRight: {
-                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
-                  '100%': { transform: 'translateX(0)', opacity: '1' },
-                },
-                scaleIn: {
-                  '0%': { transform: 'scale(0.9)', opacity: '0' },
-                  '100%': { transform: 'scale(1)', opacity: '1' },
-                },
-                scaleOut: {
-                  '0%': { transform: 'scale(1.1)', opacity: '0' },
-                  '100%': { transform: 'scale(1)', opacity: '1' },
-                },
-                float: {
-                  '0%, 100%': { transform: 'translateY(0)' },
-                  '50%': { transform: 'translateY(-10px)' },
-                },
-              },
-              aspectRatio: {
-                'portrait': '3/4',
-                'landscape': '4/3',
-                'ultrawide': '21/9',
-              },
-            },
-          },
-          variants: {
-            extend: {
-              opacity: ['disabled'],
-              cursor: ['disabled'],
-              backgroundColor: ['active', 'disabled'],
-              textColor: ['active', 'disabled'],
-            },
-          },
-        }
+        tailwind.config = require('./tailwind.config.js')
       </script>
 
       <!-- Utilities and Components -->
@@ -165,1100 +41,678 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
 
       <!-- Base Styles -->
-      <style>
-
-      * {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
-
-/* Webkit browsers like Chrome, Safari, newer Edge */
-*::-webkit-scrollbar {
-  display: none;
-  width: 0;
-  height: 0;
-}
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-          width: 0px;
-        }
-        
-        ::-webkit-scrollbar-track {
-          background: #f1f1f1;
-          border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb {
-          background: #888;
-          border-radius: 4px;
-        }
-        
-        ::-webkit-scrollbar-thumb:hover {
-          background: #666;
-        }
-
-        /* Remove tap highlight on mobile */
-        * {
-          -webkit-tap-highlight-color: transparent;
-        }
-
-        /* Improve text rendering */
-        body {
-          text-rendering: optimizeLegibility;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Focus outline styles */
-        :focus-visible {
-          outline: 2px solid currentColor;
-          outline-offset: 2px;
-        }
-
-        /* Print styles */
-        @media print {
-          .no-print {
-            display: none !important;
-          }
-          
-          a[href]:after {
-            content: " (" attr(href) ")";
-          }
-        }
-      </style>
-
-      <!-- Enhanced Image Handler -->
-      <script>
-        document.addEventListener('DOMContentLoaded', () => {
-          const imageObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                const img = entry.target;
-                if (img.dataset.src) {
-                  const tempImage = new Image();
-                  tempImage.onload = () => {
-                    img.src = img.dataset.src;
-                    img.classList.remove('opacity-0');
-                    img.classList.add('opacity-100');
-                  };
-                  tempImage.src = img.dataset.src;
-                  img.removeAttribute('data-src');
-                  observer.unobserve(img);
-                }
-              }
-            });
-          }, {
-            rootMargin: '50px 0px',
-            threshold: 0.01
-          });
-
-          const loadImage = (img) => {
-            if ('loading' in HTMLImageElement.prototype) {
-              img.loading = 'lazy';
-            }
-            
-            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
-            
-            img.onerror = () => {
-              const width = img.getAttribute('width') || img.clientWidth || 300;
-              const height = img.getAttribute('height') || img.clientHeight || 200;
-              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
-              img.alt = 'Image unavailable';
-              img.classList.remove('opacity-0');
-              img.classList.add('opacity-100', 'error-image');
-            };
-
-            if (img.dataset.src) {
-              imageObserver.observe(img);
-            } else {
-              img.classList.remove('opacity-0');
-              img.classList.add('opacity-100');
-            }
-          };
-
-          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
-
-          // Watch for dynamically added images
-          new MutationObserver((mutations) => {
-            mutations.forEach(mutation => {
-              mutation.addedNodes.forEach(node => {
-                if (node.nodeType === 1) {
-                  if (node.tagName === 'IMG') {
-                    loadImage(node);
-                  }
-                  node.querySelectorAll('img').forEach(loadImage);
-                }
-              });
-            });
-          }).observe(document.body, {
-            childList: true,
-            subtree: true
-          });
-        });
-
-        // Performance monitoring
-        if ('performance' in window && 'PerformanceObserver' in window) {
-          // Create performance observer
-          const observer = new PerformanceObserver((list) => {
-            const entries = list.getEntries();
-            entries.forEach((entry) => {
-              if (entry.entryType === 'largest-contentful-paint') {
-                // console.log(`LCP: ${entry.startTime}ms`);
-              }
-              if (entry.entryType === 'first-input') {
-                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
-              }
-              if (entry.entryType === 'layout-shift') {
-                // console.log(`CLS: ${entry.value}`);
-              }
-            });
-          });
-
-          // Observe performance metrics
-          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-          // Log basic performance metrics
-          window.addEventListener('load', () => {
-            const timing = performance.getEntriesByType('navigation')[0];
-            console.log({
-              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
-              'TCP Connection': timing.connectEnd - timing.connectStart,
-              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
-              'Page Load': timing.loadEventEnd - timing.navigationStart
-            });
-          });
-        }
-
-        // Handle offline/online status
-        window.addEventListener('online', () => {
-          document.body.classList.remove('offline');
-          console.log('Connection restored');
-        });
-        
-        window.addEventListener('offline', () => {
-          document.body.classList.add('offline');
-          console.log('Connection lost');
-        });
-      </script>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
    </head>
    <body class="antialiased text-gray-800 min-h-screen flex flex-col">
-      <!-- Skip to main content link for accessibility -->
-      <a href="#main-content" 
-         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
-         Skip to main content
-      </a>
+      <div id="root">
+        <nav id="navbar" class="fixed top-0 w-full bg-black z-50 p-4">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+              <div class="flex-shrink-0">
+                <a href="/" class="flex items-center">
+                  <img src="./assets/questbook_logo.svg" alt="Questbook" class="h-10">
+                </a>
+              </div>
+              <div class="hidden md:flex items-center justify-center flex-grow">
+                <div class="flex items-center space-x-8">
+                  <a href="#activeGrants" class="text-white hover:text-purple-500 px-3 py-2 text-base font-medium">Tracks</a>
+                  <a href="#whyPolygon" class="text-white hover:text-purple-500 px-3 py-2 text-base font-medium">Why Polygon</a>
+                  <a href="#applicationProcess" class="text-white hover:text-purple-500 px-3 py-2 text-base font-medium">Process</a>
+                  <a href="#faq" class="text-white hover:text-purple-500 px-3 py-2 text-base font-medium">FAQ</a>
+                </div>
+              </div>
+              <div class="hidden md:block">
+                <button onclick="window.location='https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/'" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-base font-medium">Apply Now</button>
+              </div>
 
-      <!-- Header -->
-      <header class="relative z-50 bg-white dark:bg-gray-900">
-        <!-- Header content goes here -->
-      </header>
+              <div class="md:hidden">
+                <button id="menu-btn" class="text-white hover:text-purple-500 p-2">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
 
-      <!-- Main content area -->
-      <main id="main-content" class="flex-1 relative ">
-        <!-- Content will be injected here -->
-      </main>
+          <!-- Mobile menu -->
+          <div id="mobile-menu" class="hidden md:hidden bg-black">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+              <a href="#activeGrants" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">Tracks</a>
+              <a href="#whyPolygon" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">Why Polygon</a>
+              <a href="#applicationProcess" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">Process</a>
+              <a href="#faq" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">FAQ</a>
+              <button onclick="window.location='https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/'" class="bg-purple-600 hover:bg-purple-700 text-white block px-4 py-2 rounded-md text-base font-medium mt-4">Apply Now</button>
+            </div>
+          </div>
+        </nav>
 
+        <script>
+          const menuBtn = document.getElementById('menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+          
+          menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+          });
+
+          // Close mobile menu when clicking outside
+          document.addEventListener('click', (e) => {
+            if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+              mobileMenu.classList.add('hidden');
+            }
+          });
+
+          // Close mobile menu when clicking on a link
+          const mobileLinks = mobileMenu.querySelectorAll('a');
+          mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+            });
+          });
+        </script>
+      </div>
+       <div id="root">
+         <section id="hero" class="bg-black min-h-[90vh] mx-auto pt-24 pb-16 relative overflow-hidden flex items-center">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+             <div class="grid lg:grid-cols-2 gap-12 items-center">
+               <div class="text-center lg:text-left animate__animated animate__fadeInLeft  sm:px-6 md:px-8">
+                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
+                   Build on <span class="relative inline-block">
+                     <span class="text-[#8247E5]">Polygon</span>
+                   </span> with Grants up to <span class="relative inline-block">
+                     <span class="relative inline-flex items-center">
+                       <span class="text-[#8247E5] font-extrabold text-5xl sm:text-6xl">50k POL</span>
+                     
+                     </span>
+                   </span>
+                 </h1>
+                 <p class="text-base sm:text-lg md:text-xl text-neutral-300 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed tracking-wide font-medium">
+                  Build consumer-centric products for the POL ecosystem. From AI to DeFi, build for the next billion users on POL.
+                 </p>
+                 <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                   <button
+                   onclick="window.location='https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/'"
+                   class="w-full sm:w-auto bg-[#8247E5] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-purple-500 active:bg-purple-600">
+                     <span class="text-lg">Apply for Grants</span>
+                   </button>
+                 </div>
+               </div>
+               <div class="relative hidden sm:block animate__animated animate__fadeInRight">
+                 <img src="./assets/polygon_logo.svg" alt="Polygon Logo" class="w-full max-w-3xl mx-auto drop-shadow-2xl animate-float" width="1200" height="1200">
+                 <div class="absolute top-1/2 right-0 -translate-y-1/2 -z-10">
+                   <div class="w-[40rem] h-[40rem] bg-purple-600/20 rounded-full filter blur-3xl animate-pulse"></div>
+                 </div>
+                 <div class="absolute -top-20 -left-20 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl animate-blob"></div>
+                 <div class="absolute -bottom-20 -right-20 w-40 h-40 bg-[#8247E5]/10 rounded-full blur-2xl animate-blob animation-delay-2000"></div>
+               </div>
+             </div>
+           </div>
+           <div class="absolute top-0 left-0 w-full h-full -z-10">
+             <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-neutral-900"></div>
+             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.12),transparent_50%)]"></div>
+             <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(130,71,229,0.12),transparent_50%)]"></div>
+             <div class="absolute w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImEiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgcGF0dGVyblRyYW5zZm9ybT0icm90YXRlKDQ1KSI+PHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iMiIgZmlsbD0iI2ZmZiIgZmlsbC1vcGFjaXR5PSIwLjAzIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2EpIi8+PC9zdmc+')] opacity-40"></div>
+           </div>
+         </section>
+       
+       
+       
+         <script>
+           // Add intersection observer for animation triggers
+           const observer1 = new IntersectionObserver((entries) => {
+             entries.forEach(entry => {
+               if (entry.isIntersecting) {
+                 entry.target.classList.add('animate__animated');
+                 observer1.unobserve(entry.target);
+               }
+             });
+           }, {
+             threshold: 0.1
+           });
+       
+           document.querySelectorAll('.animate__animated').forEach((element) => {
+             observer1.observe(element);
+           });
+         </script>
+       </div>
+         <section id="grantStats" class="bg-neutral-900 py-16 md:py-28 relative">
+           <div class="absolute inset-0 left-10 gap-4 mt-10 z-0 flex justify-start hidden md:flex">
+              <svg width="149" height="401" viewBox="0 0 149 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M89.0509 375.5H25.0612L24.9908 25.5004H88.9806C88.9806 25.5004 93.1497 17.6099 96.6702 12.6942C100.191 7.77851 106.053 0.501144 106.053 0.501144H0L0.0703662 400.499H106.123C106.123 400.499 100.261 393.221 96.7406 388.306C93.2201 383.39 89.0509 375.5 89.0509 375.5Z" fill="#9334E9"/>
+                <path d="M123.619 400.499C87.5927 345.618 54.3974 273.176 54.3974 200.294C54.3974 127.852 87.5927 55.4093 123.619 0.528702L148.618 0.5287C112.152 55.4093 82.5081 127.852 82.5081 200.294C82.5081 273.176 112.152 345.618 148.618 400.499H123.619Z" fill="#9334E9"/>
+              </svg>
+            </div>
+            <div class="absolute inset-0 right-10 gap-4 mt-10 z-0 flex justify-end hidden md:flex">
+              <svg width="149" height="401" viewBox="0 0 149 401" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M59.9491 25.5004L123.939 25.5004L124.009 375.5H60.0195C60.0195 375.5 55.8503 383.39 52.3298 388.306C48.8093 393.221 42.9472 400.499 42.9472 400.499H149L148.93 0.501154L42.8769 0.501144C42.8769 0.501144 48.739 7.77849 52.2595 12.6942C55.78 17.6099 59.9491 25.5004 59.9491 25.5004Z" fill="#9334E9"/>
+                 <path d="M25.3809 0.501483C61.4073 55.3821 94.6026 127.824 94.6026 200.706C94.6026 273.148 61.4073 345.591 25.3808 400.471H0.381836C36.8477 345.591 66.4919 273.148 66.4919 200.706C66.4919 127.824 36.8477 55.3821 0.381853 0.501482L25.3809 0.501483Z" fill="#9334E9"/>
+              </svg>
+            </div>
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+             <div class="text-center mb-16 animate__animated animate__fadeIn">
+               <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Polygon Community Grants Season 1 Impact</h2>
+               <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Empowering developers and projects to build the future of Web3 on Polygon</p>
+             </div>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+               <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-center mb-4">
+                   <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M11.8307 11.5681L10.5789 10.8435L6.82324 13.0171V17.3639L10.5789 19.5375L14.3346 17.3639V10.6019L16.4211 9.39445L18.5077 10.6019V13.0171L16.4211 14.2245L15.1693 13.5002V15.4123L16.4211 16.1369L20.1768 13.9633V9.61606L16.4211 7.44251L12.6654 9.61606V16.3781L10.5789 17.5855L8.49227 16.3781V13.9633L10.5789 12.7559L11.8307 13.4799V11.5681Z" fill="#8247E5"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-4xl font-bold text-white text-center mb-2">18M POL</h3>
+                 <p class="text-neutral-400 text-center">Total Grants Funded</p>
+               </div>
+       
+               <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp animate__delay-1s">
+                 <div class="flex items-center justify-center mb-4">
+                   <svg class="w-12 h-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z" fill="#C4B5FD"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-4xl font-bold text-white text-center mb-2">70+</h3>
+                 <p class="text-neutral-400 text-center">Total Projects Funded</p>
+               </div>
+             </div>
+           </div>
+         </section>
+
+         </section>
+         <section id="activeGrants" class="bg-black py-20 relative">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+             <div class="text-center mb-16 animate__animated animate__fadeIn">
+               <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">What Are We Looking For?</h2>
+               <p class="text-neutral-300 text-lg max-w-2xl mx-auto">We welcome innovative ideas that can contribute to the Polygon ecosystem</p>
+             </div>
+
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <!-- Grant Card 1 -->
+               <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">AI Agents</span>
+                   <span class="text-neutral-400">Open</span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">AI Innovation</h3>
+                 <p class="text-neutral-300 mb-4">Building autonomous agents, AI-powered dApps, and intelligent systems on Polygon</p>
+               </div>
+
+               <!-- Grant Card 2 -->
+               <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">DeFi</span>
+                   <span class="text-neutral-400">Open</span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">DeFi Solutions</h3>
+                 <p class="text-neutral-300 mb-4">Creating innovative financial protocols and tools to advance decentralized finance</p>
+               </div>
+
+               <!-- Grant Card 3 -->
+               <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Consumer</span>
+                   <span class="text-neutral-400">Open</span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">Consumer Products</h3>
+                 <p class="text-neutral-300 mb-4">Developing user-friendly applications that bring blockchain to everyday users</p>
+               </div>
+
+               <!-- Grant Card 4 -->
+               <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-1s">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">dApp Development</span>
+                   <span class="text-neutral-400">Open</span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">dApp Development</h3>
+                 <p class="text-neutral-300 mb-4">Building decentralized applications that solve real-world problems</p>
+               </div>
+
+               <!-- Grant Card 5 -->
+               <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-1s">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Infrastructure</span>
+                   <span class="text-neutral-400">Open </span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">Infrastructure & Tools</h3>
+                 <p class="text-neutral-300 mb-4">Building developer tools, SDKs, and infrastructure to improve the ecosystem</p>
+               </div>
+
+               <!-- Grant Card 6 -->
+               <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-1s">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Community</span>
+                   <span class="text-neutral-400">Open</span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">Hackathons & Events</h3>
+                 <p class="text-neutral-300 mb-4">Organizing hackathons, workshops, and educational programs to grow the ecosystem</p>
+               </div>
+             
+             </div>
+             
+           </div>
+          
+         </section>
+       </div>
+         <section id="whyPolygon" class="bg-neutral-800 py-20">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="text-center mb-16 animate__animated animate__fadeIn">
+               <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Build on Polygon?</h2>
+               <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Join the fastest growing blockchain ecosystem with comprehensive support</p>
+             </div>
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <!-- Feature 1 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Low Transaction Costs</h3>
+                 <p class="text-neutral-300 text-center">Build and deploy with minimal gas fees, making your dApps accessible to everyone</p>
+               </div>
+       
+               <!-- Feature 2 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp animate__delay-1s">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Ethereum Compatibility</h3>
+                 <p class="text-neutral-300 text-center">Seamlessly deploy Ethereum-compatible smart contracts with full EVM support</p>
+               </div>
+       
+               <!-- Feature 3 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp animate__delay-2s">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Scalable Network</h3>
+                 <p class="text-neutral-300 text-center">High throughput and fast block times for seamless user experience</p>
+               </div>
+       
+               <!-- Feature 4 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Developer Support</h3>
+                 <p class="text-neutral-300 text-center">Access comprehensive documentation, tooling, and community support</p>
+               </div>
+       
+               <!-- Feature 5 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp animate__delay-1s">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Growing Ecosystem</h3>
+                 <p class="text-neutral-300 text-center">Join a thriving community of developers and projects building the future</p>
+               </div>
+       
+               <!-- Feature 6 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp animate__delay-2s">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Security First</h3>
+                 <p class="text-neutral-300 text-center">Build with confidence on a network secured by robust security measures</p>
+               </div>
+             </div>
+             </div>
+           </div>
+         </section>
+       </div>
+         <section id="applicationProcess" class="py-20 bg-black">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="text-center mb-16">
+               <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 animate__animated animate__fadeInUp">
+                 Application Process
+               </h2>
+               <p class="text-lg text-neutral-300 max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">
+                 A simple, transparent process to help you get funded
+               </p>
+             </div>
+       
+             <div class="relative">
+               <div class="absolute top-0 left-1/2 h-full w-1 bg-purple-500/20 transform -translate-x-1/2 hidden md:block"></div>
+       
+               <div class="space-y-16">
+                 <div class="relative animate__animated animate__fadeInLeft">
+                   <div class="flex items-center md:flex-row flex-col">
+                     <div class="md:w-1/2 md:pr-12 text-right">
+                       <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-700 hover:border-purple-500 transition-all">
+                         <span class="bg-purple-500/20 text-purple-400 text-sm font-semibold px-3 py-1 rounded-full">Phase 1</span>
+                         <h3 class="text-xl font-bold text-white mt-4 mb-2">Submit Proposal</h3>
+                         <p class="text-neutral-300">Create a detailed grant proposal outlining your project goals, timeline, and requested funding</p>
+                       </div>
+                     </div>
+                     <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+                       <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                         <span class="text-white font-bold">1</span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+       
+                 <div class="relative animate__animated animate__fadeInRight">
+                   <div class="flex items-center md:flex-row flex-col">
+                     <div class="md:w-1/2"></div>
+                     <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+                       <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                         <span class="text-white font-bold">2</span>
+                       </div>
+                     </div>
+                     <div class="md:w-1/2 md:pl-12">
+                       <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-700 hover:border-purple-500 transition-all">
+                         <span class="bg-purple-500/20 text-purple-400 text-sm font-semibold px-3 py-1 rounded-full">Phase 2</span>
+                         <h3 class="text-xl font-bold text-white mt-4 mb-2">Rubric based Review & Feedback</h3>
+                         <p class="text-neutral-300">Our team of domain allocators (DAs) will review your proposals and provides feedback within 1-2 weeks</p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+       
+                 <div class="relative animate__animated animate__fadeInLeft">
+                   <div class="flex items-center md:flex-row flex-col">
+                     <div class="md:w-1/2 md:pr-12 text-right">
+                       <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-700 hover:border-purple-500 transition-all">
+                         <span class="bg-purple-500/20 text-purple-400 text-sm font-semibold px-3 py-1 rounded-full">Phase 3</span>
+                         <h3 class="text-xl font-bold text-white mt-4 mb-2">Advanced Review</h3>
+                         <p class="text-neutral-300">DA approved projects will head to the final review stage by the Polygon Labs team</p>
+                       </div>
+                     </div>
+                     <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+                       <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                         <span class="text-white font-bold">3</span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+       
+                 <div class="relative animate__animated animate__fadeInRight">
+                   <div class="flex items-center md:flex-row flex-col">
+                     <div class="md:w-1/2"></div>
+                     <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2">
+                       <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                         <span class="text-white font-bold">4</span>
+                       </div>
+                     </div>
+                     <div class="md:w-1/2 md:pl-12">
+                       <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-700 hover:border-purple-500 transition-all">
+                         <span class="bg-purple-500/20 text-purple-400 text-sm font-semibold px-3 py-1 rounded-full">Phase 4</span>
+                         <h3 class="text-xl font-bold text-white mt-4 mb-2">Receive Funding</h3>
+                         <p class="text-neutral-300">Approved projects receive milestone-based funding and ongoing support</p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+       
+               <div class="mt-16 text-center animate__animated animate__fadeInUp">
+                 <a href="https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-purple-500 hover:bg-purple-600 transition-colors duration-300">
+                   Start Your Application
+                   <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6229b7a8d19f088de938150c_%E2%86%97.svg" alt="arrow" class="ml-2 w-4 h-4">
+                 </a>
+                 <p class="text-neutral-300 mt-4">Average application review time: 7-14 days</p>
+               </div>
+             </div>
+           </div>
+         </section>
+       </div>
+         <section id="faq" class="bg-black py-24 relative overflow-hidden">
+   
+
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+             <div class="max-w-3xl mx-auto space-y-12">
+               <!-- Section Header -->
+               <div class="text-center mb-16">
+                 <span class="text-purple-400 font-medium mb-4 block animate__animated animate__fadeInUp">Got Questions?</span>
+                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 animate__animated animate__fadeInUp">Frequently Asked Questions</h2>
+                 <p class="text-lg text-gray-300 max-w-2xl mx-auto animate__animated animate__fadeInUp animate__delay-1s">Everything you need to know about the Polygon Grants Program</p>
+               </div>
+
+               <!-- FAQ Items -->
+               <div class="space-y-4 animate__animated animate__fadeInUp">
+                 <!-- FAQ 1 -->
+                 <div class="faq-item bg-neutral-800/50 backdrop-blur rounded-xl border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
+                   <button class="faq-button w-full text-left px-8 py-6 focus:outline-none flex justify-between items-center">
+                     <span class="text-lg font-medium text-white">What types of projects are eligible for grants?</span>
+                     <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                     </svg>
+                   </button>
+                   <div class="faq-answer hidden px-8 pb-6 text-gray-300">
+                     Anyone building fulltime on Polygon under the domains X. If you're building in Y you can apply for grants here.
+                   </div>
+                 </div>
+
+                 <!-- FAQ 2 -->
+                 <div class="faq-item bg-neutral-800/50 backdrop-blur rounded-xl border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
+                   <button class="faq-button w-full text-left px-8 py-6 focus:outline-none flex justify-between items-center">
+                     <span class="text-lg font-medium text-white">How much funding can I request?</span>
+                     <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                     </svg>
+                   </button>
+                   <div class="faq-answer hidden px-8 pb-6 text-gray-300">
+                     This program supports requests upto 50k POL on a milestone basis.
+                   </div>
+                 </div>
+
+                 <!-- FAQ 3 -->
+                 <div class="faq-item bg-neutral-800/50 backdrop-blur rounded-xl border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
+                   <button class="faq-button w-full text-left px-8 py-6 focus:outline-none flex justify-between items-center">
+                     <span class="text-lg font-medium text-white">What is the application process like?</span>
+                     <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                     </svg>
+                   </button>
+                   <div class="faq-answer hidden px-8 pb-6 text-gray-300">
+                     There is a detailed form that needs to be filled in the application process after which the Domain allocators and Polygon Labs team will review and accept/reject a proposal based on the Rubrics set.
+                   </div>
+                 </div>
+
+                 <!-- FAQ 4 -->
+                 <div class="faq-item bg-neutral-800/50 backdrop-blur rounded-xl border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
+                   <button class="faq-button w-full text-left px-8 py-6 focus:outline-none flex justify-between items-center">
+                     <span class="text-lg font-medium text-white">How are grant payments structured?</span>
+                     <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                     </svg>
+                   </button>
+                   <div class="faq-answer hidden px-8 pb-6 text-gray-300">
+                     The payments are milestone basis, after the completion of every milestone, the milestone update can be submitted on the discussion area of the proposal after which the DA will review and fund the milestone.
+                   </div>
+                 </div>
+
+                 <!-- FAQ 5 -->
+                 <div class="faq-item bg-neutral-800/50 backdrop-blur rounded-xl border border-neutral-700/50 hover:border-purple-500/50 transition-all duration-300">
+                   <button class="faq-button w-full text-left px-8 py-6 focus:outline-none flex justify-between items-center">
+                     <span class="text-lg font-medium text-white">Will I have to do KYC to get a grant?</span>
+                     <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                     </svg>
+                   </button>
+                   <div class="faq-answer hidden px-8 pb-6 text-gray-300">
+                     Yes KYC is mandatory for all projects that get accepted into the grant program. KYB will be applicable for registered businesses.
+                   </div>
+                 </div>
+               </div>
+
+               <div class="mt-20 text-center animate__animated animate__fadeInUp">
+                 <p class="text-gray-300 mb-6 text-lg">Still have questions? We're here to help!</p>
+                 <a href="#contact" class="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+                   Contact Support
+                   <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                   </svg>
+                 </a>
+               </div>
+             </div>
+           </div>
+
+           <script>
+             document.addEventListener('DOMContentLoaded', function() {
+               const faqItems = document.querySelectorAll('.faq-item');
+               
+               faqItems.forEach(item => {
+                 const button = item.querySelector('.faq-button');
+                 const answer = item.querySelector('.faq-answer');
+                 const icon = button.querySelector('svg');
+                 
+                 button.addEventListener('click', () => {
+                   const isOpen = answer.classList.contains('hidden');
+                   
+                   // Close all FAQs
+                   faqItems.forEach(otherItem => {
+                     const otherAnswer = otherItem.querySelector('.faq-answer');
+                     const otherIcon = otherItem.querySelector('svg');
+                     otherAnswer.classList.add('hidden');
+                     otherIcon.classList.remove('rotate-180');
+                     otherItem.classList.remove('border-purple-500/50');
+                   });
+                   
+                   // Open clicked FAQ
+                   if (isOpen) {
+                     answer.classList.remove('hidden');
+                     icon.classList.add('rotate-180');
+                     item.classList.add('border-purple-500/50');
+                   }
+                 });
+               });
+             });
+           </script>
+         </section>
+
+
+         <section id="communitySupport" class="bg-neutral-800 py-20">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="text-center mb-16 animate__animated animate__fadeIn">
+               <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Community Support</h2>
+               <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Join our thriving community and get the support you need</p>
+             </div>
+             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+               <!-- Community Card 1 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Developer Forum</h3>
+                 <p class="text-neutral-300 text-center mb-6">Connect with other builders, share insights, and get technical support</p>
+                 <div class="flex justify-center">
+                   <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                     Join Forum
+                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                     </svg>
+                   </a>
+                 </div>
+               </div>
+       
+               <!-- Community Card 2 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-1s">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Discord Community</h3>
+                 <p class="text-neutral-300 text-center mb-6">Real-time discussions, announcements, and community events</p>
+                 <div class="flex justify-center">
+                   <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                     Join Discord
+                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                     </svg>
+                   </a>
+                 </div>
+               </div>
+       
+               <!-- Community Card 3 -->
+               <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-2s">
+                 <div class="flex items-center justify-center mb-6">
+                   <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                   </svg>
+                 </div>
+                 <h3 class="text-xl font-bold text-white text-center mb-4">Documentation</h3>
+                 <p class="text-neutral-300 text-center mb-6">Comprehensive guides, tutorials, and technical resources</p>
+                 <div class="flex justify-center">
+                   <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
+                     View Docs
+                     <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                     </svg>
+                   </a>
+                 </div>
+               </div>
+             </div>
+       
+           </div>
+         </section>
+         <footer id="footer" class="bg-black pt-20 pb-10">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div class="col-span-1">
+                  <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6227186419f02e52cce93236_Questbook.svg" alt="Logo" class="h-8 mb-6">
+                  <p class="text-neutral-400 mb-6">Building the tools and tech needed for builders to realise the dream of decentralisation.</p>
+                </div>
+          
+                <!-- Company & Community Section -->
+                <div class="col-span-2 flex justify-end space-x-16">
+                  <!-- Company -->
+                  <div>
+                    <h3 class="text-white font-medium mb-6">Company</h3>
+                    <ul class="space-y-4">
+                      <li><a href="https://www.questbook.xyz/about" class="text-neutral-400 hover:text-white transition-colors">About us</a></li>
+                      <li><a href="https://questbook.substack.com" class="text-neutral-400 hover:text-white transition-colors">Newsletter</a></li>
+                      <li><a href="https://www.questbook.xyz/blog" class="text-neutral-400 hover:text-white transition-colors">Blog</a></li>
+                      <li><a href="https://www.figma.com/file/HE49uUjY5YnzhDukt45nMW/Questbook---Brand-Book-(Master)?node-id=129%3A786" class="text-neutral-400 hover:text-white transition-colors">Brand Toolkit</a></li>
+                    </ul>
+                  </div>
+          
+                  <!-- Community -->
+                  <div>
+                    <h3 class="text-white font-medium mb-6">Community</h3>
+                    <ul class="space-y-4">
+                      <li><a href="https://discord.gg/tWg7Mb7KM7" class="text-neutral-400 hover:text-white transition-colors">Discord</a></li>
+                      <li><a href="https://twitter.com/questbookapp" class="text-neutral-400 hover:text-white transition-colors">Twitter</a></li>
+                      <li><a href="https://medium.com/questbook" class="text-neutral-400 hover:text-white transition-colors">Medium</a></li>
+                      <li><a href="https://warpcast.com/questbook" class="text-neutral-400 hover:text-white transition-colors">Warpcast</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Bottom Section -->
+              <div class="border-t border-neutral-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                  <p class="text-neutral-400 text-sm">© <script>document.write(new Date().getFullYear())</script> Questbook. All rights reserved.</p>
+                  <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://questbook.app/termsofservice.html" class="text-neutral-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="https://questbook.app/privacypolicy.html" class="text-neutral-400 hover:text-white text-sm">Terms of Service</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          
+       </div>
+
+      <script src="./js/main.js"></script>
+      <script src="./js/nav.js"></script>
+      <script src="./js/animations.js"></script>
+      <script src="./js/faq.js"></script>
    </body>
-</html><htmlCode>
-<div id="root">
-  <nav id="navbar" class="fixed w-full z-50 bg-neutral-800 backdrop-blur-sm border-b border-neutral-700">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center">
-          <div class="flex-shrink-0 bg-white/80  p-2">
-            <img class="h-8 w-auto" src="https://assets.website-files.com/62270ece7871d925a678b02a/62271250b2a03e970f0a6e70_logo.svg" alt="Questbook Logo">
-          </div>
-          <div class="hidden md:block ml-10">
-            <div class="flex items-center space-x-8">
-              <a href="#activeGrants" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">Active Grants</a>
-              <a href="#whyPolygon" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">Why Polygon</a>
-              <a href="#applicationProcess" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">Process</a>
-              <a href="#faq" class="text-neutral-300 hover:text-white px-3 py-2 text-sm font-medium">FAQ</a>
-            </div>
-          </div>
-        </div>
-        <div class="hidden md:block">
-          <button class="bg-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-            Apply Now
-          </button>
-        </div>
-        <div class="md:hidden">
-          <button id="menuBtn" class="text-neutral-300 hover:text-white">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-neutral-800 border-t border-neutral-700">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#activeGrants" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">Active Grants</a>
-        <a href="#whyPolygon" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">Why Polygon</a>
-        <a href="#applicationProcess" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">Process</a>
-        <a href="#faq" class="text-neutral-300 hover:text-white block px-3 py-2 text-base font-medium">FAQ</a>
-        <div class="mt-4 px-3">
-          <button class="w-full bg-purple-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-            Apply Now
-          </button>
-        </div>
-      </div>
-    </div>
-  </nav>
-
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    
-    menuBtn.addEventListener('click', () => {
-      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
-      menuBtn.setAttribute('aria-expanded', !isExpanded);
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-        mobileMenu.classList.add('hidden');
-        menuBtn.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Handle smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-          // Close mobile menu after clicking a link
-          mobileMenu.classList.add('hidden');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-  </script>
-</div>
-</htmlCode><htmlCode>
-<div id="root">
-  <section id="hero" class="bg-neutral-900 min-h-[90vh] mx-auto pt-24 pb-16 relative overflow-hidden flex items-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="text-center lg:text-left animate__animated animate__fadeInLeft px-4 sm:px-0">
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-            Build on <span class="text-purple-500">Polygon</span> with Grants
-          </h1>
-          <p class="text-base sm:text-lg md:text-xl text-neutral-300 mb-6 sm:mb-8 max-w-xl mx-auto lg:mx-0">
-            Access grants up to $100k to build innovative Web3 projects. Join hundreds of funded teams building the future on Polygon.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button class="w-full sm:w-auto bg-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors animate__animated animate__fadeInUp">
-              Apply for Grants
-            </button>
-            <button class="w-full sm:w-auto border border-neutral-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-neutral-800 transition-colors animate__animated animate__fadeInUp animate__delay-1s">
-              Learn More
-            </button>
-          </div>
-          <div class="mt-12 flex flex-col sm:flex-row items-center gap-8 justify-center lg:justify-start">
-            <div class="flex items-center gap-3">
-              <i class="fas fa-chart-line text-purple-500 text-xl"></i>
-              <span class="text-neutral-300">500+ Projects Funded</span>
-            </div>
-            <div class="flex items-center gap-3">
-              <i class="fas fa-coins text-purple-500 text-xl"></i>
-              <span class="text-neutral-300">$10M+ Distributed</span>
-            </div>
-          </div>
-        </div>
-        <div class="relative hidden sm:block animate__animated animate__fadeInRight">
-          <img src="https://assets.website-files.com/62270ece7871d925a678b02a/622c315f159bfea3d7a6319c_Vector.svg" alt="Hero illustration" class="w-full max-w-lg mx-auto drop-shadow-2xl">
-          <div class="absolute top-1/2 right-0 -translate-y-1/2 -z-10">
-            <div class="w-96 h-96 bg-purple-600/20 rounded-full filter blur-3xl"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="absolute top-0 left-0 w-full h-full -z-10">
-      <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-neutral-900"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.12),transparent_50%)]"></div>
-    </div>
-  </section>
-
-  <style>
-    @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-  </style>
-
-  <script>
-    // Add intersection observer for animation triggers
-    const observer1 = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate__animated');
-          observer1.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    document.querySelectorAll('.animate__animated').forEach((element) => {
-      observer1.observe(element);
-    });
-  </script>
-</div>
-</htmlCode><htmlCode>
-<div id="root">
-  <section id="grantStats" class="bg-neutral-800 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 animate__animated animate__fadeIn">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Polygon Grants Impact</h2>
-        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Empowering developers and projects to build the future of Web3 on Polygon</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp">
-          <div class="flex items-center justify-center mb-4">
-            <img src="https://img.icons8.com/nolan/64/ethereum.png" alt="Crypto Icon" class="w-12 h-12">
-          </div>
-          <h3 class="text-4xl font-bold text-white text-center mb-2">$10M+</h3>
-          <p class="text-neutral-400 text-center">Total Grants Distributed</p>
-        </div>
-
-        <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="flex items-center justify-center mb-4">
-            <img src="https://img.icons8.com/nolan/64/blockchain-technology.png" alt="Blockchain Icon" class="w-12 h-12">
-          </div>
-          <h3 class="text-4xl font-bold text-white text-center mb-2">500+</h3>
-          <p class="text-neutral-400 text-center">Projects Funded</p>
-        </div>
-
-        <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="flex items-center justify-center mb-4">
-            <img src="https://img.icons8.com/nolan/64/globe-earth.png" alt="Global Web3 Icon" class="w-12 h-12">
-          </div>
-          <h3 class="text-4xl font-bold text-white text-center mb-2">50+</h3>
-          <p class="text-neutral-400 text-center">Countries Represented</p>
-        </div>
-
-        <div class="bg-neutral-900 p-8 rounded-xl border border-neutral-700 animate__animated animate__fadeInUp animate__delay-3s">
-          <div class="flex items-center justify-center mb-4">
-            <img src="https://img.icons8.com/nolan/64/blockchain-new-logo.png" alt="DApp Icon" class="w-12 h-12">
-          </div>
-          <h3 class="text-4xl font-bold text-white text-center mb-2">1000+</h3>
-          <p class="text-neutral-400 text-center">Active Builders</p>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <style>
-      @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-    </style>
-
-    <script>
-      const observer2 = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__animated');
-            observer2.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      document.querySelectorAll('.animate__animated').forEach((element) => {
-        observer2.observe(element);
-      });
-    </script>
-  </section>
-</div>
-</htmlCode><htmlCode>
-<div id="root">
-  <section id="activeGrants" class="bg-neutral-900 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 animate__animated animate__fadeIn">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Active Grant Programs</h2>
-        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Explore current opportunities to build and innovate on Polygon</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Grant Card 1 -->
-        <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp">
-          <div class="flex items-center justify-between mb-4">
-            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">DeFi</span>
-            <span class="text-neutral-400">Up to $50,000</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">DeFi Infrastructure Grants</h3>
-          <p class="text-neutral-300 mb-4">Building essential DeFi infrastructure and tools for the Polygon ecosystem</p>
-          <div class="flex items-center justify-between">
-            <span class="text-neutral-400 text-sm">30 days left</span>
-            <a href="#" class="text-purple-400 flex items-center">
-              Learn More
-              <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6229b7a8d19f088de938150c_%E2%86%97.svg" alt="arrow" class="w-3 h-3 ml-2">
-            </a>
-          </div>
-        </div>
-
-        <!-- Grant Card 2 -->
-        <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="flex items-center justify-between mb-4">
-            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">Gaming</span>
-            <span class="text-neutral-400">Up to $100,000</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">Web3 Gaming Grants</h3>
-          <p class="text-neutral-300 mb-4">Creating next-generation gaming experiences on Polygon</p>
-          <div class="flex items-center justify-between">
-            <span class="text-neutral-400 text-sm">45 days left</span>
-            <a href="#" class="text-purple-400 flex items-center">
-              Learn More
-              <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6229b7a8d19f088de938150c_%E2%86%97.svg" alt="arrow" class="w-3 h-3 ml-2">
-            </a>
-          </div>
-        </div>
-
-        <!-- Grant Card 3 -->
-        <div class="bg-neutral-800 rounded-xl p-6 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="flex items-center justify-between mb-4">
-            <span class="bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm">NFT</span>
-            <span class="text-neutral-400">Up to $75,000</span>
-          </div>
-          <h3 class="text-xl font-bold text-white mb-3">NFT & Creator Tools</h3>
-          <p class="text-neutral-300 mb-4">Building creator tools and NFT infrastructure for the ecosystem</p>
-          <div class="flex items-center justify-between">
-            <span class="text-neutral-400 text-sm">60 days left</span>
-            <a href="#" class="text-purple-400 flex items-center">
-              Learn More
-              <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6229b7a8d19f088de938150c_%E2%86%97.svg" alt="arrow" class="w-3 h-3 ml-2">
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="text-center mt-12 animate__animated animate__fadeIn animate__delay-3s">
-        <button class="bg-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-          View All Grants
-        </button>
-      </div>
-    </div>
-
-    <style>
-      @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-    </style>
-
-    <script>
-      const animationObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__animated');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      document.querySelectorAll('.animate__animated').forEach((element) => {
-        animationObserver.observe(element);
-      });
-    </script>
-  </section>
-</div>
-</htmlCode><htmlCode>
-<div id="root">
-  <section id="whyPolygon" class="bg-neutral-800 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 animate__animated animate__fadeIn">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Why Build on Polygon?</h2>
-        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Join the fastest growing blockchain ecosystem with comprehensive support</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Feature 1 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Low Transaction Costs</h3>
-          <p class="text-neutral-300 text-center">Build and deploy with minimal gas fees, making your dApps accessible to everyone</p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Ethereum Compatibility</h3>
-          <p class="text-neutral-300 text-center">Seamlessly deploy Ethereum-compatible smart contracts with full EVM support</p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Scalable Network</h3>
-          <p class="text-neutral-300 text-center">High throughput and fast block times for seamless user experience</p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Developer Support</h3>
-          <p class="text-neutral-300 text-center">Access comprehensive documentation, tooling, and community support</p>
-        </div>
-
-        <!-- Feature 5 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Growing Ecosystem</h3>
-          <p class="text-neutral-300 text-center">Join a thriving community of developers and projects building the future</p>
-        </div>
-
-        <!-- Feature 6 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Security First</h3>
-          <p class="text-neutral-300 text-center">Build with confidence on a network secured by robust security measures</p>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <style>
-      @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-    </style>
-
-    <script>
-      const observer3 = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__animated');
-            observer3.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      document.querySelectorAll('.animate__animated').forEach((element) => {
-        observer3.observe(element);
-      });
-    </script>
-  </section>
-</div>
-</htmlCode><htmlCode>
-<div id="root">
-  <section id="applicationProcess" class="bg-neutral-900 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 animate__animated animate__fadeIn">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Application Process</h2>
-        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Simple, transparent, and efficient grant application process</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Step 1 -->
-        <div class="relative animate__animated animate__fadeInUp">
-          <div class="bg-neutral-800 rounded-xl p-8 border border-neutral-700 h-full">
-            <div class="flex justify-between items-start mb-6">
-              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                <span class="text-purple-400 font-bold text-xl">1</span>
-              </div>
-              <svg class="w-8 h-8 text-purple-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-4">Submit Proposal</h3>
-            <p class="text-neutral-300">Create a detailed grant proposal outlining your project goals, timeline, and requested funding</p>
-          </div>
-          <div class="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
-            <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6227427f12cbc90d466e55e5_Right.svg" alt="Arrow" class="w-8 rotate-0">
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="relative animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="bg-neutral-800 rounded-xl p-8 border border-neutral-700 h-full">
-            <div class="flex justify-between items-start mb-6">
-              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                <span class="text-purple-400 font-bold text-xl">2</span>
-              </div>
-              <svg class="w-8 h-8 text-purple-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-4">Review & Feedback</h3>
-            <p class="text-neutral-300">Our team reviews your proposal and provides feedback within 1-2 weeks</p>
-          </div>
-          <div class="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 z-10">
-            <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6227427f12cbc90d466e55e5_Right.svg" alt="Arrow" class="w-8 rotate-0">
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="bg-neutral-800 rounded-xl p-8 border border-neutral-700 h-full">
-            <div class="flex justify-between items-start mb-6">
-              <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
-                <span class="text-purple-400 font-bold text-xl">3</span>
-              </div>
-              <svg class="w-8 h-8 text-purple-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 8C12 8 12 8 12.0001 8C12.0001 8 12.0001 8 12.0001 8C12.0001 8 12 8 12 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M3 12H7L10 20L14 4L17 12H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-white mb-4">Receive Funding</h3>
-            <p class="text-neutral-300">Approved projects receive milestone-based funding and ongoing support</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-16 text-center animate__animated animate__fadeIn animate__delay-3s">
-        <button class="bg-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-          Start Your Application
-        </button>
-        <p class="text-neutral-400 mt-4">Average application review time: 7-14 days</p>
-      </div>
-    </div>
-
-    <style>
-      @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-    </style>
-
-    <script>
-      const observer4 = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__animated');
-            observer4.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      document.querySelectorAll('.animate__animated').forEach((element) => {
-        observer4.observe(element);
-      });
-    </script>
-  </section>
-</div>
-</htmlCode><htmlCode>
-<div id="root">
-  <section id="faq" class="bg-neutral-800 py-20 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto space-y-8">
-        <!-- Section Header -->
-        <div class="text-center mb-16 animate__animated animate__fadeIn">
-          <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">Frequently Asked Questions</h2>
-          <p class="text-neutral-300 text-lg">Everything you need to know about getting started</p>
-        </div>
-
-        <!-- FAQ Items -->
-        <!-- FAQ 1 -->
-        <div class="bg-neutral-900/50 backdrop-blur-sm rounded-2xl animate__animated animate__fadeInUp hover:bg-neutral-800/70 transition-all duration-300 shadow-lg shadow-purple-500/5">
-          <button class="faq-toggle w-full px-8 py-6 flex justify-between items-center transition-colors rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 group">
-            <span class="text-white text-lg font-semibold text-left group-hover:text-purple-400 transition-colors">What is Questbook Grants Tool?</span>
-            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" 
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content hidden px-8 pb-8 text-neutral-300 text-lg leading-relaxed">
-            An efficient tool for creating and managing grants from your protocol, completely on chain. Grow your ecosystem by providing incentives to builders through grants.
-          </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="bg-neutral-900/50 backdrop-blur-sm rounded-2xl animate__animated animate__fadeInUp hover:bg-neutral-800/70 transition-all duration-300 shadow-lg shadow-purple-500/5">
-          <button class="faq-toggle w-full px-8 py-6 flex justify-between items-center transition-colors rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 group">
-            <span class="text-white text-lg font-semibold text-left group-hover:text-purple-400 transition-colors">How does the grants process work?</span>
-            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" 
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content hidden px-8 pb-8 text-neutral-300 text-lg leading-relaxed">
-            <p class="mb-4">The process is streamlined and fully on-chain:</p>
-            <ul class="space-y-4 list-none pl-5">
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Create your grant proposal
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Submit it through our dApp
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Receive milestone-based payments
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Track progress on-chain
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="bg-neutral-900/50 backdrop-blur-sm rounded-2xl animate__animated animate__fadeInUp hover:bg-neutral-800/70 transition-all duration-300 shadow-lg shadow-purple-500/5">
-          <button class="faq-toggle w-full px-8 py-6 flex justify-between items-center transition-colors rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 group">
-            <span class="text-white text-lg font-semibold text-left group-hover:text-purple-400 transition-colors">What makes Questbook different?</span>
-            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" 
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content hidden px-8 pb-8 text-neutral-300 text-lg leading-relaxed">
-            <ul class="space-y-4">
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400 text-xl">✨</span>
-                Completely on-chain data and interactions
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400 text-xl">🔒</span>
-                Fully open-sourced software
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400 text-xl">🌐</span>
-                Decentralized from start to finish
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400 text-xl">⚡</span>
-                Integrated workflow management
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="bg-neutral-900/50 backdrop-blur-sm rounded-2xl animate__animated animate__fadeInUp hover:bg-neutral-800/70 transition-all duration-300 shadow-lg shadow-purple-500/5">
-          <button class="faq-toggle w-full px-8 py-6 flex justify-between items-center transition-colors rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 group">
-            <span class="text-white text-lg font-semibold text-left group-hover:text-purple-400 transition-colors">Who can apply for grants?</span>
-            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" 
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content hidden px-8 pb-8 text-neutral-300 text-lg leading-relaxed">
-            <p class="mb-4">We welcome applications from:</p>
-            <ul class="space-y-4 list-none pl-5">
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Individual developers
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Development teams
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                DAOs and protocols
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Web3 startups
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="bg-neutral-900/50 backdrop-blur-sm rounded-2xl animate__animated animate__fadeInUp hover:bg-neutral-800/70 transition-all duration-300 shadow-lg shadow-purple-500/5">
-          <button class="faq-toggle w-full px-8 py-6 flex justify-between items-center transition-colors rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500/50 group">
-            <span class="text-white text-lg font-semibold text-left group-hover:text-purple-400 transition-colors">How do I get started?</span>
-            <svg class="w-6 h-6 text-purple-400 transform transition-transform duration-300" 
-                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          <div class="faq-content hidden px-8 pb-8 text-neutral-300 text-lg leading-relaxed">
-            <p class="mb-4">Getting started is simple:</p>
-            <ul class="space-y-4 list-none pl-5">
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Connect your wallet
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Browse available grants
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Create your proposal
-              </li>
-              <li class="flex items-center gap-3">
-                <span class="text-purple-400">→</span>
-                Submit and track progress
-              </li>
-            </ul>
-            <p class="mt-6 text-purple-400">Join our Discord community for additional support and guidance.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Add gradient background effect similar to Questbook -->
-      <div class="absolute inset-0 -z-10">
-        <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/50 to-neutral-900"></div>
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,58,237,0.12),transparent_50%)]"></div>
-      </div>
-    </div>
-
-    <style>
-      @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-    </style>
-
-    <script>
-      document.querySelectorAll('.faq-toggle').forEach(button => {
-        button.addEventListener('click', () => {
-          const content = button.nextElementSibling;
-          const arrow = button.querySelector('svg');
-          const allContents = document.querySelectorAll('.faq-content');
-          const allArrows = document.querySelectorAll('.faq-toggle svg');
-          
-          // Close all other FAQs
-          allContents.forEach(otherContent => {
-            if (otherContent !== content) {
-              otherContent.style.maxHeight = '0';
-              otherContent.classList.add('hidden');
-              setTimeout(() => {
-                if (otherContent.classList.contains('hidden')) {
-                  otherContent.style.maxHeight = null;
-                }
-              }, 300);
-            }
-          });
-          
-          // Reset all arrows
-          allArrows.forEach(otherArrow => {
-            if (otherArrow !== arrow) {
-              otherArrow.style.transform = 'rotate(0deg)';
-            }
-          });
-          
-          // Toggle current FAQ
-          if (content.classList.contains('hidden')) {
-            content.classList.remove('hidden');
-            content.style.maxHeight = content.scrollHeight + 'px';
-            arrow.style.transform = 'rotate(180deg)';
-          } else {
-            content.style.maxHeight = '0';
-            arrow.style.transform = 'rotate(0deg)';
-            setTimeout(() => {
-              content.classList.add('hidden');
-            }, 300);
-          }
-        });
-      });
-
-      // Update maxHeight on window resize
-      window.addEventListener('resize', () => {
-        document.querySelectorAll('.faq-content:not(.hidden)').forEach(content => {
-          content.style.maxHeight = content.scrollHeight + 'px';
-        });
-      });
-    </script>
-  </section>
-</div>
-</htmlCode><htmlCode>
-<div id="root">
-  <section id="communitySupport" class="bg-neutral-800 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16 animate__animated animate__fadeIn">
-        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Community Support</h2>
-        <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Join our thriving community and get the support you need</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Community Card 1 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Developer Forum</h3>
-          <p class="text-neutral-300 text-center mb-6">Connect with other builders, share insights, and get technical support</p>
-          <div class="flex justify-center">
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-              Join Forum
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Community Card 2 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-1s">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Discord Community</h3>
-          <p class="text-neutral-300 text-center mb-6">Real-time discussions, announcements, and community events</p>
-          <div class="flex justify-center">
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-              Join Discord
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Community Card 3 -->
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 hover:border-purple-500 transition-all animate__animated animate__fadeInUp animate__delay-2s">
-          <div class="flex items-center justify-center mb-6">
-            <svg class="w-12 h-12 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-white text-center mb-4">Documentation</h3>
-          <p class="text-neutral-300 text-center mb-6">Comprehensive guides, tutorials, and technical resources</p>
-          <div class="flex justify-center">
-            <a href="#" class="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors">
-              View Docs
-              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-16 text-center animate__animated animate__fadeIn animate__delay-3s">
-        <div class="bg-neutral-900 rounded-xl p-8 border border-neutral-700 max-w-2xl mx-auto">
-          <h3 class="text-2xl font-bold text-white mb-4">Need Additional Support?</h3>
-          <p class="text-neutral-300 mb-6">Our team is here to help you succeed with your project</p>
-          <button class="bg-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
-            Contact Support
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <style>
-      @import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css';
-    </style>
-
-    <script>
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate__animated');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, {
-        threshold: 0.1
-      });
-
-      document.querySelectorAll('.animate__animated').forEach((element) => {
-        observer.observe(element);
-      });
-    </script>
-  </section>
-</div>
-</htmlCode><htmlCode>
-<div id="root">
-  <footer id="footer" class="bg-neutral-900 pt-20 pb-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-        <!-- Brand Column -->
-        <div class="col-span-1 md:col-span-1">
-          <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6227186419f02e52cce93236_Questbook.svg" alt="Logo" class="h-8 mb-6">
-          <p class="text-neutral-400 mb-6">Building the tools and tech needed for builders to realise the dream of decentralisation.</p>
-          <div class="flex space-x-4">
-            <a href="#" class="text-neutral-400 hover:text-white">
-              <span class="sr-only">Discord</span>
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M20.317 4.492c-1.53-.69-3.17-1.2-4.885-1.49a.075.075 0 0 0-.079.036c-.21.369-.444.85-.608 1.23a18.566 18.566 0 0 0-5.487 0 12.36 12.36 0 0 0-.617-1.23A.077.077 0 0 0 8.562 3c-1.714.29-3.354.8-4.885 1.491a.07.07 0 0 0-.032.027C.533 9.093-.32 13.555.099 17.961a.08.08 0 0 0 .031.055 20.03 20.03 0 0 0 5.993 2.98.078.078 0 0 0 .084-.026 13.83 13.83 0 0 0 1.226-1.963.074.074 0 0 0-.041-.104 13.175 13.175 0 0 1-1.872-.878.075.075 0 0 1-.008-.125c.126-.093.252-.19.372-.287a.075.075 0 0 1 .078-.01c3.927 1.764 8.18 1.764 12.061 0a.075.075 0 0 1 .079.009c.12.098.245.195.372.288a.075.075 0 0 1-.006.125c-.598.344-1.22.635-1.873.877a.075.075 0 0 0-.041.105c.36.687.772 1.341 1.225 1.962a.077.077 0 0 0 .084.028 19.963 19.963 0 0 0 6.002-2.981.076.076 0 0 0 .032-.054c.5-5.094-.838-9.52-3.549-13.442a.06.06 0 0 0-.031-.028zM8.02 15.278c-1.182 0-2.157-1.069-2.157-2.38 0-1.312.956-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.956 2.38-2.157 2.38zm7.975 0c-1.183 0-2.157-1.069-2.157-2.38 0-1.312.955-2.38 2.157-2.38 1.21 0 2.176 1.077 2.157 2.38 0 1.312-.946 2.38-2.157 2.38z"/>
-              </svg>
-            </a>
-            <a href="#" class="text-neutral-400 hover:text-white">
-              <span class="sr-only">Twitter</span>
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/>
-              </svg>
-            </a>
-            <a href="#" class="text-neutral-400 hover:text-white">
-              <span class="sr-only">GitHub</span>
-              <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="col-span-1">
-          <h3 class="text-white font-medium mb-6">Product</h3>
-          <ul class="space-y-4">
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Grants tool</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Releases</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Support</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Documentation</a></li>
-          </ul>
-        </div>
-
-        <!-- Company -->
-        <div class="col-span-1">
-          <h3 class="text-white font-medium mb-6">Company</h3>
-          <ul class="space-y-4">
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">About us</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Careers</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Blog</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Press kit</a></li>
-          </ul>
-        </div>
-
-        <!-- Community -->
-        <div class="col-span-1">
-          <h3 class="text-white font-medium mb-6">Community</h3>
-          <ul class="space-y-4">
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Discord</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Twitter</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">GitHub</a></li>
-            <li><a href="#" class="text-neutral-400 hover:text-white transition-colors">Forum</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="border-t border-neutral-800 pt-8">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <p class="text-neutral-400 text-sm">© <script>document.write(new Date().getFullYear())</script> Questbook. All rights reserved.</p>
-          <div class="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" class="text-neutral-400 hover:text-white text-sm">Privacy Policy</a>
-            <a href="#" class="text-neutral-400 hover:text-white text-sm">Terms of Service</a>
-            <a href="#" class="text-neutral-400 hover:text-white text-sm">Cookies Policy</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-</div>
-</htmlCode>
+</html>
