@@ -74,7 +74,7 @@
                 </div>
               </div>
               <div class="hidden lg:block">
-                <button onclick="window.location='https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/'" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-base font-medium">Apply Now</button>
+                <button onclick="window.open('https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/', '_blank');" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-base font-medium">Apply Now</button>
               </div>
 
               <div class="lg:hidden">
@@ -94,7 +94,7 @@
               <a href="#whyPolygon" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">Why Polygon</a>
               <a href="#applicationProcess" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">Process</a>
               <a href="#faq" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">FAQ</a>
-              <button onclick="window.location='https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/'" class="bg-purple-600 hover:bg-purple-700 text-white block px-4 py-2 rounded-md text-base font-medium mt-4">Apply Now</button>
+              <button onclick="window.open('https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/', '_blank'); return false;" class="bg-purple-600 hover:bg-purple-700 text-white block px-4 py-2 rounded-md text-base font-medium mt-4">Apply Now</button>
             </div>
           </div>
         </nav>
@@ -141,7 +141,7 @@
                  </p>
                  <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                    <button
-                   onclick="window.location='https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/'"
+                   onclick="window.open('https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/', '_blank'); return false;"
                    class="w-full sm:w-auto bg-[#8247E5] text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 hover:bg-purple-500 active:bg-purple-600">
                      <span class="text-lg">Apply for Grants</span>
                    </button>
@@ -299,7 +299,54 @@
              </div>
              
            </div>
-          
+
+         </section>
+
+         <section id="additionalGrants" class="bg-black py-10 relative">
+           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+             <div class="text-center mb-16 animate__animated animate__fadeIn">
+               <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Available Grants</h2>
+               <p class="text-gray-400 text-lg max-w-2xl mx-auto">Discover the grants available for your innovative projects</p>
+             </div>
+
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <!-- Grant Card 1 -->
+               <div
+               onclick="window.open('https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/dashboard/?grantId=677cce7463365d962ce7fe87&chainId=10&role=community', '_blank'); return false;"
+               class="bg-neutral-800 rounded-xl p-6 cursor-pointer border border-neutral-700 hover:border-purple-600 transition-all animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/30 text-purple-400 px-3 py-1 rounded-full text-sm">Polygon Grants</span>
+                   <span class="text-gray-400">Available</span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">Preliminary Round</h3>
+                 <p class="text-gray-300 mb-4">Funding opportunities for groundbreaking projects within the Polygon ecosystem.</p>
+               </div>
+
+               <!-- Grant Card 2 -->
+               <div 
+               onclick="window.open('https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/dashboard/?grantId=67812d6763365d962ce80e83&chainId=10&role=community', '_blank'); return false;"
+               class="bg-neutral-800 rounded-xl p-6 cursor-pointer border border-neutral-700 hover:border-purple-600 transition-all animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/30 text-purple-400 px-3 py-1 rounded-full text-sm">AI Grants</span>
+                   <span class="text-gray-400">Available</span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">ai16z Grants</h3>
+                 <p class="text-gray-300 mb-4">Funding for projects focused on AI advancements and innovations.</p>
+               </div>
+
+               <!-- Grant Card 3 -->
+               <div 
+               onclick="window.open('https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/dashboard/?grantId=67812da563365d962ce80ed4&chainId=10&role=community', '_blank'); return false;"
+               class="bg-neutral-800 rounded-xl p-6 cursor-pointer border border-neutral-700 hover:border-purple-600 transition-all animate__animated animate__fadeInUp">
+                 <div class="flex items-center justify-between mb-4">
+                   <span class="bg-purple-500/30 text-purple-400 px-3 py-1 rounded-full text-sm">Crossmint</span>
+                   <span class="text-gray-400">Available</span>
+                 </div>
+                 <h3 class="text-xl font-bold text-white mb-3">Crossmint Grants</h3>
+                 <p class="text-gray-300 mb-4">Funding for initiatives leveraging Crossmint technology.</p>
+               </div>
+             </div>
+           </div>
          </section>
        </div>
          <section id="whyPolygon" class="bg-neutral-800 py-20">
