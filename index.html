@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden"> <!-- Added overflow-x-hidden to prevent horizontal overflow -->
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,11 +43,22 @@
       <!-- Base Styles -->
       <link rel="stylesheet" href="styles.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+      <style>
+        /* Prevent FOUC (Flash of Unstyled Content) */
+        body {
+          overflow-x: hidden;
+          visibility: hidden;
+        }
+        .js-loaded body {
+          visibility: visible;
+        }
+      </style>
    </head>
-   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+   <body class="antialiased">
       <div id="root">
         <nav id="navbar" class="fixed top-0 w-full bg-black z-50 p-4">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="md:max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
               <div class="flex-shrink-0">
                 <a href="/" class="flex items-center">
@@ -77,7 +88,7 @@
           </div>
 
           <!-- Mobile menu -->
-          <div id="mobile-menu" class="hidden md:hidden bg-black">
+          <div id="mobile-menu" class="hidden bg-black">
             <div class="px-2 pt-2 pb-3 space-y-1">
               <a href="#activeGrants" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">Tracks</a>
               <a href="#whyPolygon" class="text-white hover:text-purple-500 block px-3 py-2 text-base font-medium">Why Polygon</a>
@@ -111,15 +122,13 @@
             });
           });
         </script>
-      </div>
-       <div id="root">
          <section id="hero" class="bg-black min-h-[90vh] mx-auto pt-24 pb-16 relative overflow-hidden flex items-center">
            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
              <div class="grid lg:grid-cols-2 gap-12 items-center">
                <div class="text-center lg:text-left animate__animated animate__fadeInLeft  sm:px-6 md:px-8">
                  <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
                    Build on <span class="relative inline-block">
-                     <span class="text-[#8247E5]">Polygon</span>
+                     <span class="text-[#8247E5] font-extrabold text-5xl sm:text-6xl">Polygon</span>
                    </span> with Grants up to <span class="relative inline-block">
                      <span class="relative inline-flex items-center">
                        <span class="text-[#8247E5] font-extrabold text-5xl sm:text-6xl">50k POL</span>
@@ -176,7 +185,7 @@
            });
          </script>
        </div>
-         <section id="grantStats" class="bg-neutral-900 py-16 md:py-28 relative">
+         <section id="grantStats" class="bg-neutral-900 py-16 md:py-28 relative overflow-hidden">
            <div class="absolute inset-0 left-10 gap-4 mt-10 z-0 flex justify-start hidden md:flex">
               <svg width="149" height="401" viewBox="0 0 149 401" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M89.0509 375.5H25.0612L24.9908 25.5004H88.9806C88.9806 25.5004 93.1497 17.6099 96.6702 12.6942C100.191 7.77851 106.053 0.501144 106.053 0.501144H0L0.0703662 400.499H106.123C106.123 400.499 100.261 393.221 96.7406 388.306C93.2201 383.39 89.0509 375.5 89.0509 375.5Z" fill="#9334E9"/>
@@ -190,7 +199,7 @@
               </svg>
             </div>
            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-             <div class="text-center mb-16 animate__animated animate__fadeIn">
+             <div class="text-center mb-16 md:animate__animated animate__fadeIn">
                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Polygon Community Grants Season 1 Impact</h2>
                <p class="text-neutral-300 text-lg max-w-2xl mx-auto">Empowering developers and projects to build the future of Web3 on Polygon</p>
              </div>
@@ -457,11 +466,12 @@
                </div>
        
                <div class="mt-16 text-center animate__animated animate__fadeInUp">
-                 <a href="https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-purple-500 hover:bg-purple-600 transition-colors duration-300">
+                 <a href="https://polygon-dda.d2kovsm82jp4t0.amplifyapp.com/" class="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-purple-500 hover:from-[#7C3AED] hover:to-[#4338CA] transition-colors duration-300">
                    Start Your Application
-                   <img src="https://assets.website-files.com/62270ece7871d925a678b02a/6229b7a8d19f088de938150c_%E2%86%97.svg" alt="arrow" class="ml-2 w-4 h-4">
+                   <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7" />
+                   </svg>
                  </a>
-                 <p class="text-neutral-300 mt-4">Average application review time: 7-14 days</p>
                </div>
              </div>
            </div>
@@ -670,7 +680,7 @@
                 </div>
           
                 <!-- Company & Community Section -->
-                <div class="col-span-2 flex justify-end space-x-16">
+                <div class="col-span-2 flex justify-start md:justify-end space-x-16">
                   <!-- Company -->
                   <div>
                     <h3 class="text-white font-medium mb-6">Company</h3>
@@ -714,5 +724,12 @@
       <script src="./js/nav.js"></script>
       <script src="./js/animations.js"></script>
       <script src="./js/faq.js"></script>
+
+      <script>
+        // Prevent FOUC
+        document.addEventListener('DOMContentLoaded', function() {
+          document.documentElement.classList.add('js-loaded');
+        });
+      </script>
    </body>
 </html>
